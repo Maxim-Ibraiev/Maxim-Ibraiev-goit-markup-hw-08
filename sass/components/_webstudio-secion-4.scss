@@ -5,23 +5,36 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  flex-basis: calc(100% / 2);
   
-  max-width: 480px;
-
+  
   margin-top: 50px;
   
   @media screen and (min-width: $mobile-upper){
-  max-width: 768px;
+    // max-width: 768px;
+    flex-basis: calc((100% - 60px ) / 3);
+
   }
   
   @media screen and (min-width: $table-upper){
-  max-width: 1200px;
+    // max-width: 1200px;
   }
   
   li {
+    // max-width: 480px;
+    flex-basis: calc((100% - 30px ) / 2);
+    // max-width: 210px;
     
     margin-top: 30px;
+
+    @media screen and (min-width: $mobile-upper){
+      // max-width: 768px;
+      flex-basis: calc((100% - 60px ) / 3);
+    }
+
+    @media screen and (min-width: $table-upper){
+      // max-width: 768px;
+      flex-basis: calc((100% - 30px * 5) / 6);
+    }
   }
 }
 
@@ -33,12 +46,12 @@
 
 .our-customs a {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  // align-content: space-between;
-  
+
   max-width: 210px;
   height: 90px;
+
   
   @media screen and (min-width: $mobile-upper) {
     
@@ -59,7 +72,10 @@
 
 .icon-logo {
   max-height: 52px;
+
+  width: calc((100% - 30px ) / 2);
 }
+
 .our-customs a:hover,
 .our-customs a:focus {
   --color1: var(--color-accent);

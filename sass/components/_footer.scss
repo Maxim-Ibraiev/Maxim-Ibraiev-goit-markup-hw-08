@@ -16,8 +16,9 @@
 }
 
 .sub {
-  // margin-top: 60px;
-  
+  @media screen and (max-width: $table-lesser) {
+    margin-top: 60px;
+  }
   &-button {
     @media screen and (max-width: $table-lesser) {
       margin-top: 20px;
